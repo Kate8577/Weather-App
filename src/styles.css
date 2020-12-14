@@ -2,6 +2,7 @@ body {
   background-image: url(../images/illustration.svg);
   background-repeat: no-repeat;
   background-position: center;
+  height: 600px;
 }
 form {
   margin-top: 20px;

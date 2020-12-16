@@ -1,5 +1,6 @@
+
 let now = new Date();
-let h2 = document.querySelector("h2");
+let dateElement = document.querySelector("#date");
 let days = [
   "Sunday",
   "Monday",
@@ -19,13 +20,13 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 
-h2.innerHTML = `${day} ${hours}:${minutes}`;
+dateElement.innerHTML = `${day} ${hours}:${minutes}`;
 
 function searchCity(event) {
   event.preventDefault();
   let citySearch = document.querySelector("#search-city-input");
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = `${citySearch.value}`;
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = `${citySearch.value}`;
   search(citySearch.value);
 }
 function search(city) {
@@ -45,4 +46,6 @@ function showTemperature(response) {
   let weatherDescription = response.data.weather[0].description;
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = `${weatherDescription}`;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }

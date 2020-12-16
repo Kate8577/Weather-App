@@ -1,11 +1,3 @@
-body {
-  background-image: url(../images/illustration.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  padding-top: 5px;
-  height: 600px;
-  font-family: "Montserrat", sans-serif;
-}
 form {
   margin-top: 20px;
 }
@@ -52,6 +44,14 @@ p {
   width: 200px;
   padding: 5px;
   border-radius: 4px;
+}
+.container {
+  background-image: url(../images/illustration.svg);
+  background-repeat: no-repeat;
+  padding-top: 2px;
+  height: 700px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
 }
 .day {
   font-size: 20px;

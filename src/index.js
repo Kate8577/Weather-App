@@ -51,10 +51,14 @@ function showTemperature(response) {
   descriptionElement.innerHTML = `${weatherDescription}`;
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
+  showMessage(temperature);
 }
-function showMessage(){
+function showMessage(temperature){
   let messageElement = document.querySelector("#message");
-if (temperature > 50) {
-  messageElement.innerHTML = "Good day";
-}
+  if (temperature < 40) {
+    messageElement.innerHTML = "Baby, It's cold outside! 🥶";
+  } else {
+    messageElement.innerHTML = "It's a nice day for a walk! 🙂";
+  }
 }

@@ -10,7 +10,7 @@ h1 {
 }
 h2 {
   color: #2f2e42;
-  font-size: 24px;
+  font-size: 18px;
 }
 ul {
   margin: 0;
@@ -62,17 +62,6 @@ p {
 }
 .futuredegrees {
   color: #2f2e42;
-}
-.units {
-  font-size: 20px;
-  position: relative;
-  top: -20px;
-}
-h3 a {
-  color: #62760c;
-}
-h3 a:hover {
-  text-decoration: none;
 }
 img {
   width: 200px;

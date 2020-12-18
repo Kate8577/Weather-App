@@ -30,10 +30,6 @@ h3 {
   font-weight: bold;
   text-transform: capitalize;
 }
-li i {
-  font-size: 30px;
-  color: #fcc400;
-}
 
 p {
   font-size: 26px;
@@ -66,4 +62,8 @@ p {
 img {
   width: 200px;
   height: 200px;
+}
+li img {
+  width: 55px;
+  height: 55px;
 }

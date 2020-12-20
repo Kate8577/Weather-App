@@ -27,7 +27,7 @@ img {
 h3 {
   font-size: 20px;
   color: #62760c;
-  font-weight: 350;
+  font-weight: bolder;
   margin-bottom: 0;
   margin-top: 5px;
 }
@@ -36,17 +36,26 @@ p {
   font-size: 24px;
   color: #ea2c62;
   margin-top: 50px;
+
   background-color: #f8a927;
   width: 200px;
   padding: 5px;
   border-radius: 4px;
 }
-.container {
+img {
+  width: 150px;
+  height: 150px;
+}
+li img {
+  width: 55px;
+  height: 55px;
+}
+.weather-app {
   background-image: url(../images/illustration.svg);
   background-repeat: no-repeat;
   padding-top: 2px;
   height: 700px;
-  width: 100%;
+  max-width: 100%;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -62,14 +71,7 @@ p {
   text-transform: capitalize;
 }
 
-img {
-  width: 200px;
-  height: 200px;
-}
-li img {
-  width: 55px;
-  height: 55px;
-}
 .weather-forecast-temperature {
   color: #2f2e42;
+  margin-bottom: 20px;
 }

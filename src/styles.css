@@ -29,6 +29,8 @@ h3 {
   color: #62760c;
   font-weight: bold;
   text-transform: capitalize;
+  margin-bottom: 0;
+  margin-top: 5px;
 }
 
 p {
@@ -48,17 +50,11 @@ p {
   width: 100%;
   font-family: "Montserrat", sans-serif;
 }
-.day {
-  font-size: 20px;
-  font-weight: bolder;
-  color: #62760c;
-}
+
 .currentdegrees {
   font-size: 50px;
 }
-.futuredegrees {
-  color: #2f2e42;
-}
+
 img {
   width: 200px;
   height: 200px;

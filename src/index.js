@@ -101,7 +101,7 @@ function showMessage(weatherDescription) {
     messageElement.innerHTML = "After a storm comes a calm! ⚡️";
   }
   else if (weatherDescription === "Snow") {
-    messageElement.innerHTML = "Let it snow, let it snow, let it snow!❄️";
+    messageElement.innerHTML = "Let it snow, let it snow, let it snow! ❄️";
   } else {
     messageElement.innerHTML = "It's a good day to have a good day! 🙂";
 }

@@ -70,15 +70,16 @@ form.addEventListener("submit", searchCity);
 
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
-  
+
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = `${temperature}°F`;
-
   let weatherDescription = response.data.weather[0].description;
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = `${weatherDescription}`;
   let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = response.data.name;
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 

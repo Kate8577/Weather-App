@@ -73,7 +73,7 @@ function showTemperature(response) {
 
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = `${temperature}°F`;
-  let weatherDescription = response.data.weather[0].description;
+  let weatherDescription = response.data.weather[0].main;
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = `${weatherDescription}`;
   let dateElement = document.querySelector("#date");
@@ -83,13 +83,26 @@ function showTemperature(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
-  showMessage(temperature);
+
+   showMessage(weatherDescription);
 }
-function showMessage(temperature){
+
+function showMessage(weatherDescription) {
   let messageElement = document.querySelector("#message");
-  if (temperature < 40) {
-    messageElement.innerHTML = "Baby, It's cold outside! 🥶";
-  } else {
-    messageElement.innerHTML = "It's a nice day for a walk! 🙂";
+  if (weatherDescription === "Clear"){
+    messageElement.innerHTML = "It's a good day for a walk! 🙂";
+  } else if (weatherDescription === "Clouds") {
+    messageElement.innerHTML = "A cloudy sky doesn't always cry rain! ☁️";
+  } else if (weatherDescription === "Rain") {
+    messageElement.innerHTML = "Let a smile be your umbrella! ☂️";
+  } else if (weatherDescription === "Drizzle"){
+    messageElement.innerHTML = "Let a smile be your umbrella! ☂️";
+  } else if (weatherDescription === "Thunderstorm") {
+    messageElement.innerHTML = "After a storm comes a calm! ⚡️";
   }
+  else if (weatherDescription === "Snow") {
+    messageElement.innerHTML = "Let it snow, let it snow, let it snow!❄️";
+  } else {
+    messageElement.innerHTML = "It's a good day to have a good day! 🙂";
+}
 }
